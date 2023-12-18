@@ -3,17 +3,28 @@
 return [
     /**
      * If this is set to TRUE then the package will calculate the blurhash whenever a new media
-     * model is created. Set it to FALSE if you'd prefer to do it manually.
+     * model is created.
      *
-    'run_on_created' => true,
-
-    /**
-     * List of mime types that represent *supported* images
+     * However, this is not always desirable. If you're using remote file storage such as
+     * S3, the model may be created before the file is available; in which case you'll need
+     * to fire the job yourself.
      */
+    'run_on_created' => true,
     'image_mime_types' => [
         'image/jpeg',
         'image/png',
     ],
 
-    'queue' => null,
+    'queue' => [
+
+        /**
+         * Optionally specify the name of the queue to use
+         */
+        'name' => null,
+
+        /**
+         * Optionally override the queue
+         */
+        'connection' => null,
+    ],
 ];
