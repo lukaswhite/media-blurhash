@@ -10,6 +10,10 @@ return [
      * to fire the job yourself.
      */
     'run_on_created' => true,
+
+    /**
+     * List of mime types that represent *supported* images
+     */
     'image_mime_types' => [
         'image/jpeg',
         'image/png',
