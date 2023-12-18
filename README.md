@@ -1,4 +1,4 @@
-# Media Blurhash
+# Media BlurHash
 
 A very simple package for Laravel that calculates the BlurHash of images added via Spatie's Laravel Media Library, which you can then use as placeh
 older images.
@@ -6,11 +6,11 @@ older images.
 In other words, you can show this as a placeholder:
 
 <img src="https://raw.githubusercontent.com/lukaswhite/media-blurhash/main/docs/images/blurhash-example-2.jpg" alt="Example of a Blurhash"/>
-<br/><br/>
+<br/>
 ...from an image like this:
 
 <img src="https://raw.githubusercontent.com/lukaswhite/media-blurhash/main/docs/images/blurhash-example.jpg" alt="Example of a Blurhash"/>
-<br/><br/>
+<br/>
 More information:
 
  - [BlurHash](https://blurha.sh/)
