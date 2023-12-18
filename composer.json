@@ -1,0 +1,56 @@
+{
+    "name": "lukaswhite/media-blurhash",
+    "description": "BlurHash support for Laravel Media Library",
+    "keywords": [
+        "lukaswhite",
+        "media-blurhash"
+    ],
+    "homepage": "https://github.com/lukaswhite/media-blurhash",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Lukas White",
+            "email": "hello@lukaswhite.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0|^9.0|^10.0",
+        "spatie/laravel-medialibrary": "*",
+        "bepsvpt/blurhash": "^2.1"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lukaswhite\\MediaBlurhash\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Lukaswhite\\MediaBlurhash\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Lukaswhite\\MediaBlurhash\\MediaBlurhashServiceProvider"
+            ],
+            "aliases": {
+                "MediaBlurhash": "Lukaswhite\\MediaBlurhash\\MediaBlurhashFacade"
+            }
+        }
+    }
+}
